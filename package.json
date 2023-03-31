@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
-    "eslint": "8.37.0",
+    "eslint": "^8.37.0",
     "husky": "^8.0.0",
     "lint-staged": "13.2.0",
     "plop": "3.1.2"
