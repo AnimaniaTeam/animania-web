@@ -28,7 +28,6 @@ export function Input({ placeholder }: InputProps) {
           color="#616161"
           placeholder={placeholder}
           _placeholder={{ color: "#616161" }}
-          fontFamily="Lato"
         />
       </InputGroup>
     </Box>

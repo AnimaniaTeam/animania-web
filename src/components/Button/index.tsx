@@ -13,7 +13,7 @@ export function Button({ children }: ButtonProps) {
       border="1px"
       borderColor="#3182CE"
       bg="#63B3ED"
-      fontFamily="Inter"
+      shadow="md"
     >
       {children}
     </ChakraButton>
