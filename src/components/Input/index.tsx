@@ -3,22 +3,20 @@ import {
   Input as ChakraInput,
   InputGroup,
   InputLeftElement,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
+import { MagnifyingGlass } from '@phosphor-icons/react'
 
 interface InputProps {
-  placeholder: string;
+  placeholder: string
 }
 
 export function Input({ placeholder }: InputProps) {
   return (
     <Box>
-      <InputGroup>
-        <InputLeftElement
-          pointerEvents="none"
-          children={"O"}
-          h="3.75rem"
-          color="#616161"
-        />
+      <InputGroup alignItems="center">
+        <InputLeftElement pointerEvents="none" color="#616161" h="3.75rem">
+          <MagnifyingGlass size={20} />
+        </InputLeftElement>
         <ChakraInput
           w="31.875rem"
           h="3.75rem"
@@ -27,10 +25,9 @@ export function Input({ placeholder }: InputProps) {
           borderColor="#616161"
           color="#616161"
           placeholder={placeholder}
-          _placeholder={{ color: "#616161" }}
+          _placeholder={{ color: '#616161' }}
         />
       </InputGroup>
     </Box>
-  );
+  )
 }
-
