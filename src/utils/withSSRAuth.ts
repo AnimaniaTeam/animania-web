@@ -15,7 +15,7 @@ export function withSSRAuth<P extends { [key: string]: any }>(
   ): Promise<GetServerSidePropsResult<P>> => {
     const cookies = parseCookies(ctx)
 
-    if (!cookies['extranetabvaq.token']) {
+    if (!cookies['animania.token']) {
       return {
         redirect: {
           destination: '/login',
