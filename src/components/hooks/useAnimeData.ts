@@ -1,18 +1,18 @@
-import { AnimeData } from "../@types/AnimeData";
+import { AnimeData } from '../@types/AnimeData'
 
 export function useAnimeData() {
   const sampleAnime: AnimeData = {
     id: 1,
-    title: "One Piece",
-    image_url: "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
-    genres: ["Aventura", "Fantasia", "Ação"],
-    whereToWatch: "Crunchyroll",
+    title: 'One Piece',
+    image_url: 'https://cdn.myanimelist.net/images/anime/6/73245.jpg',
+    genres: ['Aventura', 'Fantasia', 'Ação'],
+    whereToWatch: 'Crunchyroll',
     numberOfEpisodes: 1062,
-    releaseDate: "20/10/1999",
+    releaseDate: '20/10/1999',
     numberOfSeasons: 13,
     likes: 1000000,
     dislikes: 100,
-  };
+  }
 
   const data = {
     sunday: [
@@ -38,8 +38,7 @@ export function useAnimeData() {
     thursday: [sampleAnime, sampleAnime],
     friday: [sampleAnime, sampleAnime, sampleAnime, sampleAnime, sampleAnime],
     saturday: [sampleAnime, sampleAnime, sampleAnime],
-  };
+  }
 
-  return data;
+  return data
 }
-

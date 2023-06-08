@@ -1,7 +1,9 @@
-import { Navbar } from "~/components/Navbar";
+import { withSSRAuth } from '~/utils/withSSRAuth'
 
-import { Flex } from "@chakra-ui/react";
-import { Main } from "~/components/Main";
+import { Navbar } from '~/components/Navbar'
+
+import { Flex } from '@chakra-ui/react'
+import { Main } from '~/components/Main'
 
 export default function Home() {
   return (
@@ -9,6 +11,11 @@ export default function Home() {
       <Navbar />
       <Main />
     </Flex>
-  );
+  )
 }
 
+export const getServerSideProps = withSSRAuth(async () => {
+  return {
+    props: {},
+  }
+})

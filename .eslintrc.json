@@ -1,6 +1,7 @@
 {
   "extends": "@rocketseat/eslint-config/react",
   "rules": {
+    "no-undef": "off",
     "camelcase": "off",
     "no-redeclare": "off",
     "@typescript-eslint/camelcase": "off"

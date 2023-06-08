@@ -1,7 +1,7 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
-import { Input } from "../Input";
-import { Button } from "../Button";
-import { ReleasesCounter } from "../ReleasesCounter";
+import { Box, Flex, Heading } from '@chakra-ui/react'
+import { Input } from '../Input'
+import { Button } from '../Button'
+import { ReleasesCounter } from '../ReleasesCounter'
 
 export function Header() {
   return (
@@ -29,6 +29,5 @@ export function Header() {
         </Flex>
       </Box>
     </Flex>
-  );
+  )
 }
-

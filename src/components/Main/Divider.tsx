@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react'
 
 export function Divider() {
   return (
@@ -11,27 +11,26 @@ export function Divider() {
       border="none"
       _after={{
         content: '""',
-        display: "block",
-        height: "10px",
-        width: "10px",
-        borderRadius: "50%",
-        background: "#D69E2E",
-        position: "absolute",
-        top: "-4px",
-        left: "100%",
+        display: 'block',
+        height: '10px',
+        width: '10px',
+        borderRadius: '50%',
+        background: '#D69E2E',
+        position: 'absolute',
+        top: '-4px',
+        left: '100%',
       }}
       _before={{
         content: '""',
-        display: "block",
-        height: "10px",
-        width: "10px",
-        borderRadius: "50%",
-        background: "#D69E2E",
-        position: "absolute",
-        top: "-4px",
-        right: "100%",
+        display: 'block',
+        height: '10px',
+        width: '10px',
+        borderRadius: '50%',
+        background: '#D69E2E',
+        position: 'absolute',
+        top: '-4px',
+        right: '100%',
       }}
     />
-  );
+  )
 }
-

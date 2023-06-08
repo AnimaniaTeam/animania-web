@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+import { Text } from '@chakra-ui/react'
 
 export function GenreList({ genres }: { genres: string[] }) {
   return (
@@ -16,6 +16,5 @@ export function GenreList({ genres }: { genres: string[] }) {
         </Text>
       ))}
     </>
-  );
+  )
 }
-

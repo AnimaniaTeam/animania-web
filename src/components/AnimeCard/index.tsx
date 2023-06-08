@@ -1,17 +1,17 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, Image } from '@chakra-ui/react'
+
 import {
   ThumbsUp,
   ThumbsDown,
   Trash,
   PencilSimpleLine,
-} from "@phosphor-icons/react";
-import { AnimeData } from "../@types/AnimeData";
-import { GenreList } from "./GenreList";
+} from '@phosphor-icons/react'
+import { AnimeData } from '../@types/AnimeData'
+import { GenreList } from './GenreList'
 
 type AnimeCardProps = {
-  anime: AnimeData;
-};
+  anime: AnimeData
+}
 
 export function AnimeCard({ anime }: AnimeCardProps) {
   return (
@@ -34,7 +34,7 @@ export function AnimeCard({ anime }: AnimeCardProps) {
               bg="#652B19"
               py={2}
               px={4}
-              _hover={{ bg: "#833721" }}
+              _hover={{ bg: '#833721' }}
             >
               <Trash size={24} color="#FFF" />
             </Button>
@@ -44,7 +44,7 @@ export function AnimeCard({ anime }: AnimeCardProps) {
               bg="#2C5282"
               py={2}
               px={4}
-              _hover={{ bg: "#346198" }}
+              _hover={{ bg: '#346198' }}
             >
               <PencilSimpleLine size={24} color="#FFF" />
             </Button>
@@ -86,6 +86,5 @@ export function AnimeCard({ anime }: AnimeCardProps) {
         </Flex>
       </Flex>
     </Box>
-  );
+  )
 }
-

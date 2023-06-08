@@ -1,11 +1,11 @@
-import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
-import { AnimeData } from "../@types/AnimeData";
-import { AnimeCard } from "../AnimeCard";
+import { Box, Heading, SimpleGrid } from '@chakra-ui/react'
+import { AnimeData } from '../@types/AnimeData'
+import { AnimeCard } from '../AnimeCard'
 
 type DayListProps = {
-  day: string;
-  list: AnimeData[];
-};
+  day: string
+  list: AnimeData[]
+}
 
 export function AnimeList({ day, list }: DayListProps) {
   return (
@@ -20,6 +20,5 @@ export function AnimeList({ day, list }: DayListProps) {
         ))}
       </SimpleGrid>
     </Box>
-  );
+  )
 }
-

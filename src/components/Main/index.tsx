@@ -1,11 +1,11 @@
-import React from "react";
-import { Box } from "@chakra-ui/react";
-import { AnimeList } from "../AnimeList";
-import { useAnimeData } from "../hooks/useAnimeData";
-import { Divider } from "./Divider";
+import React from 'react'
+import { Box } from '@chakra-ui/react'
+import { AnimeList } from '../AnimeList'
+import { useAnimeData } from '../hooks/useAnimeData'
+import { Divider } from './Divider'
 
 export function Main() {
-  const data = useAnimeData();
+  const data = useAnimeData()
 
   return (
     <Box as="main" m={10} px={6} py={5} bg="#FFF59D" rounded="2xl">
@@ -23,6 +23,5 @@ export function Main() {
       <Divider />
       <AnimeList day="Sábado" list={data.saturday} />
     </Box>
-  );
+  )
 }
-
