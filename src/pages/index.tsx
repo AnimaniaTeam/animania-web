@@ -1,13 +1,13 @@
-import { Flex } from "@chakra-ui/react";
-
 import { Navbar } from "~/components/Navbar";
-import { Header } from "~/components/Header";
+
+import { Flex } from "@chakra-ui/react";
+import { Main } from "~/components/Main";
 
 export default function Home() {
   return (
     <Flex direction="column">
       <Navbar />
-      <Header />
+      <Main />
     </Flex>
   );
 }
