@@ -17,7 +17,7 @@ export function withSSRGuest<P extends { [key: string]: any }>(
     if (cookies['animania.token']) {
       return {
         redirect: {
-          destination: '/home',
+          destination: '/',
           permanent: false,
         },
       }

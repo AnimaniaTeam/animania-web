@@ -4,8 +4,7 @@ import {
   GetServerSidePropsResult,
 } from 'next'
 
-import { destroyCookie, parseCookies } from 'nookies'
-import { AuthTokenError } from '~/services/errors/AuthTokenError'
+import { parseCookies } from 'nookies'
 
 export function withSSRAuth<P extends { [key: string]: any }>(
   fn: GetServerSideProps<P>,
@@ -24,26 +23,6 @@ export function withSSRAuth<P extends { [key: string]: any }>(
       }
     }
 
-    try {
-      return await fn(ctx)
-    } catch (error) {
-      if (error instanceof AuthTokenError) {
-        destroyCookie(ctx, 'animania.token')
-
-        return {
-          redirect: {
-            destination: '/',
-            permanent: false,
-          },
-        }
-      } else {
-        return {
-          redirect: {
-            destination: '/error',
-            permanent: false,
-          },
-        }
-      }
-    }
+    return await fn(ctx)
   }
 }

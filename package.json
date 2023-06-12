@@ -20,6 +20,7 @@
     "@chakra-ui/react": "2.5.5",
     "@emotion/react": "11.10.6",
     "@emotion/styled": "11.10.6",
+    "@hookform/resolvers": "^3.1.1",
     "@next/font": "13.3.0",
     "@phosphor-icons/react": "^2.0.9",
     "@types/node": "18.15.11",
@@ -32,7 +33,9 @@
     "nookies": "^2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4"
+    "react-hook-form": "^7.44.3",
+    "typescript": "5.0.4",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",

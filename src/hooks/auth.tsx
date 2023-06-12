@@ -48,6 +48,8 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const [errorAuth, setErrorAuth] = useState<boolean>(false)
   const [loadingAuth, setLoadingAuth] = useState<boolean>(false)
 
+  console.log('Hm...')
+
   const isAuthenticated = !!user
 
   useEffect(() => {
@@ -71,12 +73,20 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   }, [])
 
   async function signIn({ email, password }: SignInCredentials) {
+    console.log(
+      '🚀 ~ file: auth.tsx:74 ~ signIn ~ email, password:',
+      email,
+      password,
+    )
+
     try {
       setLoadingAuth(true)
       const response = await api.post('sessions', {
         email,
         password,
       })
+
+      console.log('🚀 ~ file: auth.tsx:86 ~ signIn ~ response:', response)
 
       const { token } = response.data
 
@@ -93,7 +103,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
 
       setErrorAuth(false)
       setLoadingAuth(false)
-      Router.push('/extranet/home')
+      Router.push('/')
     } catch (error) {
       console.log(error)
       setErrorAuth(true)

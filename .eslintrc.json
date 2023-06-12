@@ -4,6 +4,7 @@
     "no-undef": "off",
     "camelcase": "off",
     "no-redeclare": "off",
+    "no-use-before-define": "off",
     "@typescript-eslint/camelcase": "off"
   }
 }
