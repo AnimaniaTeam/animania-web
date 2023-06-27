@@ -1,6 +1,9 @@
 import { Flex, Image, Button, Text } from '@chakra-ui/react'
+import { useAuth } from '~/hooks/auth'
 
 export function Navbar() {
+  const { signOut } = useAuth()
+
   return (
     <Flex
       as={'nav'}
@@ -25,7 +28,7 @@ export function Navbar() {
             </Text>
           </Button>
 
-          <Button variant={'link'}>
+          <Button variant={'link'} onClick={() => signOut()}>
             <Text color={'#F6AD55'} fontSize={'1.75rem'} fontWeight={'400'}>
               Sair
             </Text>

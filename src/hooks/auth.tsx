@@ -40,7 +40,7 @@ const AuthContext = createContext({} as AuthContextData)
 export function signOut() {
   Cookies.remove('animania.token')
 
-  Router.push('/')
+  Router.push('/login')
 }
 
 const AuthProvider = ({ children }: AuthProviderProps) => {
