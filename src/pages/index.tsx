@@ -1,7 +1,14 @@
+import { Navbar } from "~/components/Navbar";
+
+import { Flex } from "@chakra-ui/react";
+import { Main } from "~/components/Main";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Olá Mundo!</h1>
-    </div>
-  )
+    <Flex direction="column">
+      <Navbar />
+      <Main />
+    </Flex>
+  );
 }
+
