@@ -26,6 +26,8 @@ const PInput: ForwardRefRenderFunction<HTMLInputElement, IInput> = (
           type={isPassword ? (show ? 'text' : 'password') : 'input'}
           borderColor={'#ECC94B'}
           borderRadius={'2px'}
+          fontWeight={'400'}
+          fontFamily={'lato'}
           backgroundColor={'#FFF59D'}
           _focus={{
             borderColor: '#ECC94B',

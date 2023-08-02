@@ -1,29 +1,23 @@
-import { Roboto_Flex, Work_Sans } from 'next/font/google'
+import { Lato, Skranji } from 'next/font/google'
 
 import { AppProvider } from '~/hooks'
-
-import '@egjs/react-flicking/dist/flicking.css'
-import '@egjs/react-flicking/dist/flicking-inline.css'
-
-import '@egjs/flicking-plugins/dist/pagination.css'
-import '@egjs/flicking-plugins/dist/flicking-plugins.css'
 
 export const metadata = {
   title: 'Animania',
 }
 
-const roboto = Roboto_Flex({
+const lato = Lato({
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-roboto',
-  weight: ['400', '500', '700', '900'],
+  variable: '--font-lato',
+  weight: ['100', '300', '400', '700', '900'],
 })
 
-const workSans = Work_Sans({
+const skranji = Skranji({
   display: 'swap',
   subsets: ['latin'],
-  variable: '--font-work-sans',
-  weight: ['500', '700'],
+  variable: '--font-skranji',
+  weight: ['400', '700'],
 })
 
 export default function RootLayout({
@@ -34,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${roboto.variable} ${workSans.variable} scroll-smooth`}
+      className={`${lato.variable} ${skranji.variable} scroll-smooth`}
     >
       <body>
         <AppProvider>{children}</AppProvider>

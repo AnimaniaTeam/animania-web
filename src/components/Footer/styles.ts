@@ -20,7 +20,7 @@ export const Wrapper = styled(C.Flex)`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   > img {
     width: auto;
@@ -29,30 +29,3 @@ export const Wrapper = styled(C.Flex)`
 `
 
 export const Logo = styled(C.Image)``
-
-export const Navigation = styled(C.Flex)`
-  width: auto;
-  height: auto;
-
-  gap: 1rem;
-  display: flex;
-  align-items: center;
-`
-
-export const Profile = styled(C.Flex)`
-  width: min-content;
-  height: auto;
-
-  gap: 0.25rem;
-  display: flex;
-  align-items: center;
-
-  > span {
-    color: #ffffff;
-    font-family: var(--font-lato);
-    font-size: 1rem;
-    font-weight: 400;
-  }
-`
-
-export const ButtonLogout = styled.button``

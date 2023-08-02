@@ -12,7 +12,9 @@ export function Button({ children, ...rest }: Button) {
       maxWidth={'12rem'}
       borderColor={'#3182CE'}
       borderRadius={'2px'}
-      color={'#212121'}
+      color={'#424242'}
+      fontWeight={'700'}
+      fontFamily={'lato'}
       backgroundColor={'#63B3ED'}
       _hover={{
         opacity: '0.75',

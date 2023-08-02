@@ -1,35 +1,31 @@
-import { Link } from 'react-router-dom'
+'use client'
 
-import { Menu } from './Menu'
-// import { Drawer } from './Drawer'
-
-import * as S from './styles'
-
-import { navigation } from '~/utils/navigation'
 import { useAuth } from '~/hooks/useAuth'
 
-export function Nav() {
-  const { accessLevel } = useAuth()
+import * as C from '@chakra-ui/react'
+import * as S from './styles'
 
-  const formattedNavigation = navigation.filter(
-    (item) => item.accessLevel <= accessLevel
-  )
+import { MdPerson, MdLogout } from 'react-icons/md'
+
+export function Nav() {
+  const { user, handleSignOut } = useAuth()
 
   return (
     <S.Container as={'nav'}>
-      {/* <Drawer /> */}
-
       <S.Wrapper>
-        <S.Logo alt={'Logo'} src={'/images/png/logo.png'} />
-        <S.Navigation>
-          {formattedNavigation.map((item) => (
-            <Link key={item.id} to={item.href}>
-              {item.title}
-            </Link>
-          ))}
-        </S.Navigation>
+        <S.Logo alt={'Logo Animania'} src={'/images/png/logo.png'} />
 
-        <Menu />
+        <S.Navigation>
+          <S.Profile>
+            <MdPerson size={24} color={'#ffffff'} />
+
+            <C.Text as={'span'}>{user?.email}</C.Text>
+          </S.Profile>
+
+          <S.ButtonLogout onClick={handleSignOut}>
+            <MdLogout size={24} color={'#ffffff'} />
+          </S.ButtonLogout>
+        </S.Navigation>
       </S.Wrapper>
     </S.Container>
   )

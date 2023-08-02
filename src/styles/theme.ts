@@ -6,8 +6,8 @@ export const theme = extendTheme({
   },
 
   fonts: {
-    workSans: 'var(--font-work-sans)',
-    roboto: 'var(--font-roboto)',
+    lato: 'var(--font-lato)',
+    skranji: 'var(--font-skranji)',
   },
 
   styles: {
