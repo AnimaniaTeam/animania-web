@@ -33,10 +33,11 @@ export const AuthContext = createContext<AuthContextDataProps>(
 )
 
 export function AuthContextProvider({ children }: AuthContextProviderProps) {
+  const router = useRouter()
+
   const { '@animania:id': id } = parseCookies()
   const { '@animania:token': token } = parseCookies()
 
-  const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const [user, setUser] = useState<IUser | null>(null)
 
@@ -50,11 +51,11 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
       .then(async (res) => {
         setUser(res.data)
 
-        setCookie(null, '@animania:token', res.data.token, {
+        setCookie(null, '@animania:id', res.data.id, {
           maxAge: 7 * 24 * 60 * 60,
         })
 
-        setCookie(null, '@animania:id', res.data.id, {
+        setCookie(null, '@animania:token', res.data.token, {
           maxAge: 7 * 24 * 60 * 60,
         })
 
@@ -78,10 +79,10 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   }
 
   async function handleSignOut() {
-    destroyCookie(null, '@animania:id')
-    destroyCookie(null, '@animania:token')
-
     router.push('/')
+
+    destroyCookie(null, '@animania:user')
+    destroyCookie(null, '@animania:token')
 
     setUser(null)
   }
