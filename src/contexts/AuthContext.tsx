@@ -81,7 +81,7 @@ export function AuthContextProvider({ children }: AuthContextProviderProps) {
   async function handleSignOut() {
     router.push('/')
 
-    destroyCookie(null, '@animania:user')
+    destroyCookie(null, '@animania:id')
     destroyCookie(null, '@animania:token')
 
     setUser(null)
